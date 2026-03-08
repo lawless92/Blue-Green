@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tokio-blue
+spec:
+  selector:
+    matchLabels:
+      app: example-app
+      environment: blue
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: example-app
+        environment: blue
+    spec:
+      containers:
+      - name: tokio-blue
+        image: demoapp:v1.0
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+        ports:
+        - containerPort: 80

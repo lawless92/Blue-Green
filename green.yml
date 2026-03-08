@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tokio-green
+spec:
+  selector:
+    matchLabels:
+      app: example-app
+      environment: green
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: example-app
+        environment: green
+    spec:
+      containers:
+      - name: demoapp-green
+        image: demoapp:v1.0
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
+        ports:
+        - containerPort: 80
