@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: tokio-blue
-        image: demoapp:v1.0
+        image: luksa/kubia:v1.0
         resources:
           limits:
             memory: "128Mi"
