@@ -16,7 +16,11 @@ spec:
     spec:
       containers:
       - name: tokio-blue
-        image: luksa/kubia:1.0
+        image: lawless/example-app:1.0
+        imagePullPolicy: Never
+        env:
+        - name: APP_COLOR
+          value: "blue"
         resources:
           limits:
             memory: "128Mi"
