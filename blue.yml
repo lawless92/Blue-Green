@@ -17,7 +17,7 @@ spec:
       containers:
       - name: tokio-blue
         image: lawless/example-app:1.0
-        imagePullPolicy: Never
+        imagePullPolicy: IfNotPresent
         env:
         - name: APP_COLOR
           value: "blue"
