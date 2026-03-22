@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: demoapp-green
-        image: lawless92/example-app:1.0
+        image: lawless92/example-app:1.1
         imagePullPolicy: IfNotPresent
         env:
         - name: APP_COLOR

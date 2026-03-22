@@ -11,6 +11,7 @@ class SimpleHandler(BaseHTTPRequestHandler):
         html = f"<html><body style='background-color: {color}; color: white; text-align: center; font-family: sans-serif; margin-top: 50px;'>" \
                f"<h1>¡Hola desde el entorno {color.upper()}!</h1>" \
                f"<p>Esta es mi simple app en Python para la tarea Blue-Green.</p>" \
+               f"<p>usando la imagen de Docker 1.1</p>" \
                f"</body></html>"
         self.wfile.write(html.encode('utf-8'))
 
