@@ -4,7 +4,7 @@ metadata:
   name: blue-green-service
 spec:
   selector:
-    app: example-app
+    environment: green
   ports:
   - protocol: TCP
     port: 8080
